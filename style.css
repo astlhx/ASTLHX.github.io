@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* 全局居中容器：占满屏幕，强制居中 */
+.center-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+
+/* 666显示区域：居中+渐变色文字 */
+.success {
+    font-size: 12rem;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 对话框样式：卡片化+阴影+圆角 */
+.dialog {
+    background-color: #ffffff;
+    padding: 3rem 4.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+/* 问题文字：居中+加粗 */
+.dialog-content .question {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #2d3436;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* 按钮组：弹性布局+间距 */
+.btn-group {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 按钮基础样式：圆角+阴影+过渡 */
+.btn {
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* 帅按钮：绿色渐变+hover效果 */
+.handsome-btn {
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+    color: white;
+}
+.handsome-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(67, 160, 71, 0.25);
+}
+
+/* 不帅按钮：红色渐变+hover效果 */
+.not-handsome-btn {
+    background: linear-gradient(135deg, #e53935, #ef5350);
+    color: white;
+}
+.not-handsome-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(229, 57, 53, 0.25);
+}
+
+/* 响应式适配：手机端缩小尺寸 */
+@media (max-width: 600px) {
+    .dialog {
+        padding: 2rem 2.5rem;
+    }
+    .dialog-content .question {
+        font-size: 1.8rem;
+    }
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+    .success {
+        font-size: 8rem;
+    }
+}
